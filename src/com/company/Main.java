@@ -28,7 +28,7 @@ public class Main {
                         EchoClientHandler echoClientHandler = new EchoClientHandler(map, clientSocket);
                         new Thread(echoClientHandler).start();
                     } catch (Exception e) {
-                        System.out.println(e);
+                        e.printStackTrace();
                     }
                 }
             });
@@ -68,7 +68,7 @@ public class Main {
                     }
                 }
             } catch (Exception e) {
-                System.out.println(e);
+                e.printStackTrace();
             }
         }
     }
