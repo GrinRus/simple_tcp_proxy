@@ -67,6 +67,7 @@ public class SocketChannelMain {
                     ByteBuffer buffer = ByteBuffer.allocate(LEN);
                     while (clientSocket.isConnected() && rtmpServer.isConnected()) {
                         try {
+                            clientSocketChannel.read(buffer);
                             rtmpSocketChannel.write(buffer);
                         } catch (IOException e) {
                             e.printStackTrace();
